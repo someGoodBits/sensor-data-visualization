@@ -1,0 +1,106 @@
+* {
+    padding:0;
+    margin :0;
+    box-sizing:border-box;
+    font-family:"nunito", sans-serif;
+}
+
+:root {
+    --bg:#181d25;
+    --surface:hsl(220,20%,16%);
+    --n-500 : hsl(220,15%,50%) ;
+    --n-200 : hsl(220,15%,75%) ;
+    --n-700 : hsl(220,20%,20%) ;
+    --n-800 : hsl(220,20%,16%) ;
+    --n-900 : hsl(220,20%,12%) ;
+}
+
+.wrapper{
+    position: absolute ;
+    top: 0 ;
+    left: 0 ;
+    width : 100vw ;
+    height: 100vh ;
+    overflow: hidden ;
+    /* background-color: var(--bg) ; */
+    color: #fff ;
+}
+
+.sidebar {
+    position: absolute ;
+    width : 16rem ;
+    height: 100% ;
+    position: relative ;
+    background-color: var(--surface) ;
+    padding: 0.5rem ;
+}
+
+.sidebar .item {
+    position: relative;
+    display: flex ;
+    border-radius: 0.5rem ;
+    padding: 0.75rem ;
+    align-items: center ;
+    background-color: var(--surface);
+    color: var(--n-200);
+    cursor: pointer ;
+}
+
+.sidebar .item:hover {
+    background-color: var(--n-700);
+    color: var(--n-200);
+}
+
+.sidebar .sidebar-title {
+    color: #fff ;
+    font-weight: 800 ;
+    margin: 1rem 0 1.5rem 0 ;
+    text-align: center;
+}
+
+.sidebar .item .icon {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.sidebar .item svg {
+    stroke: var(--n-500) ;
+    margin-right: 0.75rem ;
+}
+
+.sidebar .item .name {
+    text-overflow: ellipsis ;
+    overflow: hidden ;
+    word-break: keep-all ;
+    white-space: nowrap ;
+}
+
+.sidebar .active {
+    background-color: var(--bg);
+}
+
+.sidebar .active::before {
+    position: absolute ;
+    content: "" ;
+    top: 50% ;
+    right: 0.5rem ;
+    width: 0.25rem ;
+    height: 1.5rem ;
+    background-color: hsl(220,80%,50%);
+    border-radius: 500px ;
+    transform: translate(-50%,-50%);
+}
+
+.sensor-data {
+    position: absolute ;
+    left: 0 ;
+    bottom: 0 ;
+    color: var(--n-500) ;
+    z-index: 1 ;
+    padding: 1rem ;
+}
+
+.sensor-data .data-meter {
+    margin-top: 0.75rem ;
+}
